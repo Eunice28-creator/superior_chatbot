@@ -95,14 +95,13 @@ def superior_chat(request):
             """
 
             # Build the prompt
-            prompt = f"""
-            {chatbot_personality}
-            {lead_qualification_prompt}
-            Previous conversation:
-            {"".join([f"User: {chat['message']}\nChatbot: {chat['response']}\n" for chat in user_history[:5]])}
-            User: {user_message}
-            Chatbot:
-            """
+            prompt = (
+                f"{chatbot_personality}\n"
+                f"{lead_qualification_prompt}\n"
+                "Previous conversation:\n"
+                + "".join([f"User: {chat['message']}\nChatbot: {chat['response']}\n" for chat in user_history[:5]])
+                + f"User: {user_message}\nChatbot:"
+            )
 
             # Generate AI response
             response = client.chat.completions.create(
