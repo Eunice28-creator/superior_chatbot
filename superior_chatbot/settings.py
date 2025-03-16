@@ -32,7 +32,7 @@ SECRET_KEY = os.getenv("SECRET_KEY", "django-insecure-default-key-for-developmen
 DEBUG = os.getenv("DEBUG", "False").lower() == "true"
 
 # Allowed hosts (comma-separated list)
-ALLOWED_HOSTS = os.getenv("ALLOWED_HOSTS", "localhost,127.0.0.1").split(",")
+ALLOWED_HOSTS = os.getenv("ALLOWED_HOSTS", "localhost,127.0.0.1,superior-chatbot.onrender.com").split(",")
 
 # Application definition
 INSTALLED_APPS = [
@@ -119,6 +119,7 @@ APPEND_SLASH = False
 
 # CSRF settings
 CSRF_TRUSTED_ORIGINS = os.getenv("CSRF_TRUSTED_ORIGINS", "http://127.0.0.1:8000").split(",")
+CSRF_TRUSTED_ORIGINS.append('https://superior-chatbot.onrender.com')
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
