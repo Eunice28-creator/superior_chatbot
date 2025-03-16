@@ -1,0 +1,27 @@
+{
+    "cSpell.words": [
+        "anyio",
+        "asgiref",
+        "certifi",
+        "colorama",
+        "distro",
+        "djangorestframework",
+        "dnspython",
+        "dotenv",
+        "eunicebissaka",
+        "gunicorn",
+        "httpcore",
+        "httpx",
+        "idna",
+        "jiter",
+        "mynwccy",
+        "pydantic",
+        "pymongo",
+        "sniffio",
+        "sqlparse",
+        "tqdm",
+        "tsgut",
+        "tzdata",
+        "wsgi"
+    ]
+}
